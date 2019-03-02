@@ -1,2 +1,2 @@
 # billion-dollar-baby
-this repo worths a billion
+this repo is worth a billion
