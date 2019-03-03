@@ -1,5 +1,6 @@
 const path = require('path');
 const glob = require('glob');
+const webpack = require('webpack');
 const TransferWebpackPlugin = require("transfer-webpack-plugin");
 
 const JS_ROOT = `./src`;
@@ -12,6 +13,11 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, './dist')
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname),
+        port: 5588,
+        hot: true
     },
     module: {
         rules: [
@@ -28,7 +34,8 @@ module.exports = {
                         plugins: [
                             'lodash',
                             ["@babel/plugin-proposal-decorators", { "legacy": true }],
-                            ["@babel/plugin-proposal-class-properties", { "loose" : true }]
+                            ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+                            'react-hot-loader/babel'
                         ]
                     }
                 }

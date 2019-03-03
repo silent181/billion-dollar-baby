@@ -1,8 +1,7 @@
 import React from 'react';
-import { 
-    Button
-} from 'Component';
+import styles from './index.scss?module';
 
+console.log(123);
 class TopBar extends React.Component {
     constructor(props) {
         super(props);
@@ -10,9 +9,8 @@ class TopBar extends React.Component {
 
     render() {
         return (
-            <div>
-                这是TopBar
-                <Button>i'm a styled button</Button>
+            <div className={styles.container}>
+                这是TopBadd111222
             </div>
         );
     }

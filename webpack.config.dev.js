@@ -35,8 +35,13 @@ module.exports = (env, argv) => {
                     ]
                 }
             ]
-        }
+        },
+        plugins: [
+
+        ]
+    };
+    if (env.bundleAnalysis) {
+        devConfig.plugins.push(new BundleAnalyzerPlugin());
     }
-    devConfig.plugins = env.bundleAnalysis ? [new BundleAnalyzerPlugin()] : [];
     return merge(base, devConfig);
 };
