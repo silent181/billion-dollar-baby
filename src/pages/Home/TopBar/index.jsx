@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.scss?module';
 
-console.log(123);
+console.log(1231);
 class TopBar extends React.Component {
     constructor(props) {
         super(props);
