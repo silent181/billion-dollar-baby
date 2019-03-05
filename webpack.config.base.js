@@ -17,7 +17,8 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname),
         port: 5588,
-        hot: true
+        hot: true,
+        open: true
     },
     module: {
         rules: [
@@ -33,6 +34,12 @@ module.exports = {
                         ],
                         plugins: [
                             'lodash',
+                            [
+                                '@babel/plugin-transform-runtime',
+                                {
+                                    corejs: 2
+                                }
+                            ],
                             ["@babel/plugin-proposal-decorators", { "legacy": true }],
                             ["@babel/plugin-proposal-class-properties", { "loose" : true }],
                             'react-hot-loader/babel'
