@@ -1,3 +1,7 @@
 http://yulo.com:80 {
     root .
 }
+
+http://49.233.131.11:80 {
+    root .
+}
